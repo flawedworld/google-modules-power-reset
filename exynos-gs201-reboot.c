@@ -89,7 +89,7 @@ static void exynos_reboot_parse(const char *cmd)
 		} else if (!strcmp(cmd, "shutdown-thermal") ||
 			   !strcmp(cmd, "shutdown,thermal")) {
 			if (force_warm_reboot_on_thermal_shutdown)
-				force_warm_reboot = true;
+				force_warm_reboot = false;
 			value = REBOOT_MODE_SHUTDOWN_THERMAL;
 		} else if (!strcmp(cmd, "reboot-ab-update")) {
 			value = REBOOT_MODE_AB_UPDATE;
